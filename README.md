@@ -2,9 +2,11 @@
 
 "A Byte of Python" is a free book on programming using the Python language. It serves as a tutorial or guide to the Python language for a beginner audience. If all you know about computers is how to save text files, then this is the book for you.
 
+_This version merely updates the code reference to Python 3.12 (from 3.6), removes reference to Python 2 (EOL 2020), and updates the base install instructions for Windows (11 with download, MS Store, or Linux Subsystem), Apple (MacOS over OS X), and PyCharm._
+
 ## For Python version 3
 
-This book will teach you to use Python version 3. There will also be guidance for you to adapt to the older and more common Python version 2 in the book.
+This book will teach you to use Python version 3 (code examples use 3.12). All references to Python 2 have been removed in this edition of the book due to its end of support on Jan. 1st, 2020.
 
 ## Who reads A Byte of Python? {#who-reads-bop}
 
