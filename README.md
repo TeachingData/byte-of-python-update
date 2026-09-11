@@ -248,6 +248,7 @@ The book is even used by NASA! It is used in their [Jet Propulsion Laboratory](h
 
 This book is/was being used as instructional material in various educational institutions:
 
+- 'Foundations of Programming' course at [Millikin University, IL](https://millikin.edu/tabor-school-business)
 - 'Principles of Programming Languages' course at [Vrije Universiteit, Amsterdam](http://www.few.vu.nl/~nsilvis/PPL/2007/index.html)
 - 'Basic Concepts of Computing' course at [University of California, Davis](http://www.cs.ucdavis.edu/courses/exp_course_desc/10.html)
 - 'Programming With Python' course at [Harvard University](http://www.people.fas.harvard.edu/~preshman/python_winter.html)
