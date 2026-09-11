@@ -16,6 +16,11 @@ The book needs the help of its readers such as yourselves to point out any parts
 
 # Appendix: Revision History {#revision-history}
 
+- 4.5
+    - 06 Oct 2026
+    - Updated Python 3 due to EOL of Python 3.6 in 2021
+    - Fixed various links broken during changes from original format to various others
+
 - No version change
     - 06 Nov 2020
     - Migrated from abandoned GitBook to [community-maintained Honkit, a fork of GitBook legacy](https://github.com/honkit/honkit)
