@@ -6,7 +6,13 @@ There are two ways of using Python to run your program - using the interactive i
 
 ## Using The Interpreter Prompt
 
-Open the terminal in your operating system (as discussed previously in the [Installation](./installation.md#installation) chapter) and then open the Python prompt by typing `python3` and pressing `[enter]` key.
+Open the terminal in your operating system using:
+ - Windows: pressing the Windows Key + R and typing `wt` then `[enter]`
+     - Older windows: type `cmd` instead
+ - Linux: Ctrl+Alt+T
+ - MacOS: Command+Spacebar
+ 
+Then open the Python prompt by typing `python3` or `python` and pressing `[enter]` key.
 
 Once you have started Python, you should see `>>>` where you can start typing stuff. This is called the _Python interpreter prompt_.
 
@@ -18,25 +24,15 @@ print("Hello World")
 
 followed by the `[enter]` key. You should see the words `Hello World` printed to the screen.
 
-Here is an example of what you should be seeing, when using a Mac OS X computer. The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be the same regardless of the operating system.
+Here is an example of what you should be seeing, when using Windows 11. The details about the Python software will differ based on your computer, but the part from the prompt (i.e. from `>>>` onwards) should be similar regardless of the operating system.
 
-<!-- The output should match pythonVersion variable in book.json -->
-```python
-$ python3
-Python 3.6.0 (default, Jan 12 2017, 11:26:36)
-[GCC 4.2.1 Compatible Apple LLVM 8.0.0 (clang-800.0.38)] on darwin
-Type "help", "copyright", "credits" or "license" for more information.
->>> print("Hello World")
-Hello World
-```
+![Hellow World Results](./img/python_windows.png)
 
 Notice that Python gives you the output of the line immediately! What you just entered is a single Python _statement_. We use `print` to (unsurprisingly) print any value that you supply to it. Here, we are supplying the text `Hello World` and this is promptly printed to the screen.
 
 ### How to Quit the Interpreter Prompt
 
-If you are using a GNU/Linux or OS X shell, you can exit the interpreter prompt by pressing `[ctrl + d]` or entering `exit()` (note: remember to include the parentheses, `()`) followed by the `[enter]` key.
-
-If you are using the Windows command prompt, press `[ctrl + z]` followed by the `[enter]` key.
+Entering `exit()` (note: remember to include the parentheses, `()`) followed by the `[enter]` key will exit the interpreter in any system. For MacOS or Linux, you can also exit the interpreter prompt by pressing `[ctrl + d]` (`[cmd + d]`) while for Windows you'd press `[ctrl + z]`.
 
 ## Choosing An Editor
 
@@ -46,10 +42,13 @@ To create our Python source files, we need an editor software where you can type
 
 One of the very basic requirements is _syntax highlighting_ where all the different parts of your Python program are colorized so that you can _see_ your program and visualize its running.
 
-If you have no idea where to start, I would recommend using [PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) software which is available on Windows, Mac OS X and GNU/Linux. Details in the next section.
+__New to Programming or Used to JetBrains__
+If you are new to programming (or used to JetBrains products), I would recommend using [PyCharm's Community Edition](https://www.jetbrains.com/pycharm/) which is available on Windows, MacOS, and Linux. The standard version includes all the basic features you need while Pro is available for students and educators if you register for their [student pack](https://www.jetbrains.com/academy/student-pack/). Full details are in the next section.
 
-If you are using Windows, *do not use Notepad* - it is a bad choice because it does not do syntax highlighting and also importantly it does not support indentation of the text which is very important in our case as we will see later. Good editors will automatically do this.
+__Used to VSCode__
+It works perfectly fine for Python and they even provide a [pretty solid tutorial](https://code.visualstudio.com/docs/python/python-tutorial) for setting it up.
 
+__Old hand at Emacs or Vim__
 If you are an experienced programmer, then you must be already using [Vim](http://www.vim.org) or [Emacs](http://www.gnu.org/software/emacs/). Needless to say, these are two of the most powerful editors and you will benefit from using them to write your Python programs. I personally use both for most of my programs, and have even written an [entire book on Vim]({{ book.vimBookUrl }}).
 
 In case you are willing to take the time to learn Vim or Emacs, then I highly recommend that you do learn to use either of them as it will be very useful for you in the long run. However, as I mentioned before, beginners can start with PyCharm and focus the learning on Python rather than the editor at this moment.
@@ -60,7 +59,9 @@ If you are interested in a detailed discussion on this topic, check out [Finding
 
 ## PyCharm {#pycharm}
 
-[PyCharm Educational Edition](https://www.jetbrains.com/pycharm-edu/) is a free editor which you can use for writing Python programs.
+[PyCharm Educational Edition](https://www.jetbrains.com/pycharm/) is a free editor which you can use for writing Python programs. Note, when you set it up for the first time it will provide a Trial edition of Pro but once that expires you have 2 choices:
+  - You can continue with the "Community" verison (less features)
+  - If Student/Educator: You can apply for the [JetBrains Education License](https://www.jetbrains.com/academy/student-pack/) (to apply you merely need to sign in once approved)
 
 When you open PyCharm, you'll see this, click on `Create New Project`:
 
@@ -110,18 +111,18 @@ You can find more information about PyCharm in the [PyCharm Quickstart](https://
 ## Vim
 
 1. Install [Vim](http://www.vim.org)
-    * Mac OS X users should install `macvim` package via [HomeBrew](http://brew.sh/)
+    * MacOS users should install `macvim` package via [HomeBrew](http://brew.sh/)
     * Windows users should download the "self-installing executable" from [Vim website](http://www.vim.org/download.php)
-    * GNU/Linux users should get Vim from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `vim` package.
+    * Linux users should get Vim from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `vim` package.
 2. Install [jedi-vim](https://github.com/davidhalter/jedi-vim) plugin for autocompletion.
 3. Install corresponding `jedi` python package : `pip install -U jedi`
 
 ## Emacs
 
 1. Install [Emacs 24+](http://www.gnu.org/software/emacs/).
-    * Mac OS X users should get Emacs from http://emacsformacosx.com
+    * MacOS users should get Emacs from http://emacsformacosx.com
     * Windows users should get Emacs from http://ftp.gnu.org/gnu/emacs/windows/
-    * GNU/Linux users should get Emacs from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `emacs24` package.
+    * Linux users should get Emacs from their distribution's software repositories, e.g. Debian and Ubuntu users can install the `emacs24` package.
 2. Install [ELPY](https://github.com/jorgenschaefer/elpy/wiki)
 
 ## Using A Source File
@@ -142,8 +143,8 @@ Where should you save the file? To any folder for which you know the location of
 don't understand what that means, create a new folder and use that location to save and run all
 your Python programs:
 
-- `/tmp/py` on Mac OS X
-- `/tmp/py` on GNU/Linux
+- `/tmp/py` on MacOS
+- `/tmp/py` on Linux
 - `C:\py` on Windows
 
 To create the above folder (for the operating system you are using), use the `mkdir` command in the terminal, for example, `mkdir /tmp/py`.
