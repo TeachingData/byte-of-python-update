@@ -98,7 +98,24 @@ You should now see the output (what it prints) of your program:
 
 Phew! That was quite a few steps to get started, but henceforth, every time we ask you to create a new file, remember to just ensure you select the `create welcome script` option and then clear out the sample text and remove the breakpoint so your ready to go.
 
-You can find more information about PyCharm in the [PyCharm Quickstart](https://www.jetbrains.com/help/pycharm/quick-start-guide.html) page.
+You can find more information about PyCharm in the [PyCharm Quickstart](https://www.jetbrains.com/help/pycharm/quick-start-guide.html) page. The next section is only needed if command-line arguments are required (i.e. you want to run a script like `./check_file.py file=quarterly_sales.json` directly from PyCharm) - if you are just starting you can return here once that is required.
+
+### PyCharm Command Line
+To add command line arguments we have to add a configuration file (the default doesn't have it): 
+
+To do so: click on `Current File` -> `Edit Configurations`->`add new...`:
+
+![PyCharm run configuration](./img/pycharm_configuration.png)
+
+Then scroll and select `Python` (as this is Pure Python):
+
+![PyCharm select Python](./img/pycharm_configuration_submenu.png)
+
+Select your main Python file (click the folder next to the `script` field)
+
+![Set Script Location](./img/pycharm_set_script_location.gif)
+
+Then just change the `script parameters` field to include any arguments you want to send to the Python script.
 
 ## Vim
 
