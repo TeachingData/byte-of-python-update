@@ -59,7 +59,7 @@ If you are interested in a detailed discussion on this topic, check out [Finding
 
 ## PyCharm {#pycharm}
 
-[PyCharm Educational Edition](https://www.jetbrains.com/pycharm/) is a free editor which you can use for writing Python programs. Note, when you set it up for the first time it will provide a Trial edition of Pro but once that expires you have 2 choices:
+[PyCharm](https://www.jetbrains.com/pycharm/) is a free editor which you can use for writing Python programs. Note, when you set it up for the first time it will provide a Trial edition of Pro but once that expires you have 2 choices:
   - You can continue with the "Community" verison (less features)
   - If Student/Educator: You can apply for the [JetBrains Education License](https://www.jetbrains.com/academy/student-pack/) (to apply you merely need to sign in once approved)
 
