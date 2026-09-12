@@ -10,12 +10,13 @@ The `if` statement is used to check a condition: *if* the condition is true, we 
 
 Example (save as `if.py`):
 
-<!-- Tags expansion does not happen inside code blocks https://github.com/GitbookIO/gitbook/issues/707 -->
-<pre><code class="lang-python">{% include "./programs/if.py" %}</code></pre>
+<!-- Code expansion was added in 2022 - use permalink to include code: Select (click on) lines you want then hit ... and select copy permalink -->
+
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/if.py#L1-L19
 
 Output:
 
-<pre><code>{% include "./programs/if.txt" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/if.txt#L1-L15
 
 **How It Works**
 
@@ -39,12 +40,15 @@ Remember that the `elif` and `else` parts are optional. A minimal valid `if` sta
 if True:
     print('Yes, it is true')
 ```
+> **Note this will show a warning in PyCharm**
+>
+> That's actually a good thing (as this will always be True so is not needed) but we'll ignore it for now because we are learning
 
 After Python has finished executing the complete `if` statement along with the associated `elif` and `else` clauses, it moves on to the next statement in the block containing the `if` statement. In this case, it is the main block (where execution of the program starts), and the next statement is the `print('Done')` statement. After this, Python sees the ends of the program and simply finishes up.
 
 Even though this is a very simple program, I have been pointing out a lot of things that you should notice. All these are pretty straightforward (and surprisingly simple for those of you from C/C++ backgrounds). You will need to become aware of all these things initially, but after some practice you will become comfortable with them, and it will all feel 'natural' to you.
 
-> **Note for C/C++ Programmers**
+> **Note for C/C++ & Java Programmers**
 > 
 > There is no `switch` statement in Python. You can use an `if..elif..else` statement to do the same thing (and in some cases, use a [dictionary](./data_structures.md#dictionary) to do it quickly)
 
@@ -54,11 +58,11 @@ The `while` statement allows you to repeatedly execute a block of statements as 
 
 Example (save as `while.py`):
 
-<pre><code class="lang-python">{% include "./programs/while.py" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/while.py#L1-L19
 
 Output:
 
-<pre><code>{% include "./programs/while.txt" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/while.txt#L1-L9
 
 **How It Works**
 
@@ -80,11 +84,11 @@ The `for..in` statement is another looping statement which *iterates* over a seq
 
 Example (save as `for.py`):
 
-<pre><code class="lang-python">{% include "./programs/for.py" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/for.py#L1-L4
 
 Output:
 
-<pre><code>{% include "./programs/for.txt" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/for.txt#L1-L6
 
 **How It Works**
 
@@ -102,9 +106,9 @@ Remember that the `for..in` loop works for any sequence. Here, we have a list of
 
 > **Note for C/C++/Java/C# Programmers**
 > 
-> The Python `for` loop is radically different from the C/C++ `for` loop. C# programmers will note that the `for` loop in Python is similar to the `foreach` loop in C#. Java programmers will note that the same is similar to `for (int i : IntArray)` in Java 1.5.
+> The Python `for` loop is by default an enhanced or foreach loop over a traditional c-style for-loop. C++ & Java programmers will note that the same is similar to `for (int i : IntArray)` versions and especially `for (var i : IntArray)` of Java 11+ or `for (auto i : IntArray)` of Modern C++.
 > 
-> In C/C++, if you want to write `for (int i = 0; i < 5; i++)`, then in Python you write just `for i in range(0,5)`. As you can see, the `for` loop is simpler, more expressive and less error prone in Python.
+> So if you want the traditional `for (int i = 0; i < 5; i++)` c-style loop, then in Python you write just `for i in range(0,5)`.
 
 ## The break Statement {#break-statement}
 
@@ -114,11 +118,11 @@ An important note is that if you *break* out of a `for` or `while` loop, any cor
 
 Example (save as `break.py`):
 
-<pre><code class="lang-python">{% include "./programs/break.py" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/break.py#L1-L6
 
 Output:
 
-<pre><code>{% include "./programs/break.txt" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/break.txt#L1-L11
 
 **How It Works**
 
@@ -147,11 +151,11 @@ The `continue` statement is used to tell Python to skip the rest of the statemen
 
 Example (save as `continue.py`):
 
-<pre><code class="lang-python">{% include "./programs/continue.py" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/continue.py#L1-L9
 
 Output:
 
-<pre><code>{% include "./programs/continue.txt" %}</code></pre>
+https://github.com/TeachingData/byte-of-python-update/blob/3b7b71de191e804e6b0258545799d85980e021ed/programs/continue.txt#L1-L8
 
 **How It Works**
 
