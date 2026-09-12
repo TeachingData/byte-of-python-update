@@ -67,36 +67,27 @@ When you open PyCharm, you'll see this, click on `Create New Project`:
 
 ![When you open PyCharm](./img/pycharm_open.png)
 
-Select `Pure Python`:
+Select `New Project` at the top then `Pure Python`:
+Ensure you select `venv` and then either use the installed Python version version or select a different version to have PyCharm install it locally.
+Change location from the default to the location you want ending in `helloworld` and ensure you clicked you `create welcome script` option
+You should see details similar to this:
 
 ![PyCharm New Project](./img/pycharm_create_new_project.png)
 
-Change `untitled` to `helloworld` as the location of the project, you should see details similar to this:
-
-![PyCharm project details](./img/pycharm_create_new_project_pure_python.png)
-
 Click the `Create` button.
 
-Right-click on the `helloworld` in the sidebar and select `New` -> `Python File`:
+As we created a Welcome Script we will already have a Python script ready to run
 
 ![PyCharm -> New -> Python File](./img/pycharm_new_python_file.png)
 
-You will be asked to type the name, type `hello`:
-
-![PyCharm New File dialog box](./img/pycharm_new_file_input.png)
-
-You can now see a file opened for you:
-
-![PyCharm hello.py file](./img/pycharm_hello_open.png)
-
-Delete the lines that are already present, and now type the following:
-
-<!-- TODO: Update screenshots for Python 3 -->
+Delete the lines that are already present and either click on the red dot or hit `Ctrl+F8` to turn off the debugging breakpoint (more on that later). Then type the following:
 
 ```python
+# This is simple hello script
 print("hello world")
 ```
-Now right-click on what you typed (without selecting the text), and click on `Run 'hello'`.
+
+Now either hit `Shift+F10` or click on the Run button (Triangle pointing to right):
 
 ![PyCharm Run 'hello'](./img/pycharm_run.png)
 
@@ -104,9 +95,9 @@ You should now see the output (what it prints) of your program:
 
 ![PyCharm output](./img/pycharm_output.png)
 
-Phew! That was quite a few steps to get started, but henceforth, every time we ask you to create a new file, remember to just right-click on `helloworld` on the left -> `New` -> `Python File` and continue the same steps to type and run as shown above.
+Phew! That was quite a few steps to get started, but henceforth, every time we ask you to create a new file, remember to just ensure you select the `create welcome script` option and then clear out the sample text and remove the breakpoint so your ready to go.
 
-You can find more information about PyCharm in the [PyCharm Quickstart](https://www.jetbrains.com/pycharm-educational/quickstart/) page.
+You can find more information about PyCharm in the [PyCharm Quickstart](https://www.jetbrains.com/help/pycharm/quick-start-guide.html) page.
 
 ## Vim
 
