@@ -47,7 +47,7 @@ Examples of floating point numbers (or _floats_ for short) are `3.23` and `52.3E
 
 > **Note for Experienced Programmers**
 > 
-> There is no separate `long` type. The `int` type can be an integer of any size.
+> There is no separate `long` type. The `int` type can be an integer of any size (that fits in memory).
 
 ## Strings
 
@@ -83,7 +83,7 @@ This means that once you have created a string, you cannot change it. Although t
 a bad thing, it really isn't. We will see why this is not a limitation in the various programs that
 we see later on.
 
-> **Note for C/C++ Programmers**
+> **Note for C/C++ or Java Programmers**
 > 
 > There is no separate `char` data type in Python. There is no real need for it and I am sure you won't miss it.
 
@@ -95,7 +95,7 @@ we see later on.
 
 ### The format method
 
-Sometimes we may want to construct strings from other information. This is where the `format()` method is useful.
+Sometimes we may want to construct strings from other information. This is where f-strings (formatted strings) or the `format` function can be useful.
 
 Save the following lines as a file `str_format.py`:
 
@@ -104,7 +104,7 @@ age = 20
 name = 'Swaroop'
 
 print('{0} was {1} years old when he wrote this book'.format(name, age))
-print('Why is {0} playing with that python?'.format(name))
+print('Why is a {0} year old {1} playing with that python?'.format(age, name))
 ```
 
 Output:
@@ -112,7 +112,7 @@ Output:
 ```
 $ python str_format.py
 Swaroop was 20 years old when he wrote this book
-Why is Swaroop playing with that python?
+Why is a 20 year old Swaroop playing with that python?
 ```
 
 **How It Works**
@@ -127,40 +127,34 @@ Notice that we could have achieved the same using string concatenation:
 name + ' is ' + str(age) + ' years old'
 ```
 
-but that is much uglier and more error-prone. Second, the conversion to string would be done automatically by the `format` method instead of the explicit conversion to strings needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
+but that is much uglier and more error-prone. Second, the conversion to string (the use of `str(age)` to turn a number into a string) would be done automatically by the `format` method instead of the explicit conversion needed in this case. Third, when using the `format` method, we can change the message without having to deal with the variables used and vice-versa.
 
-Also note that the numbers are optional, so you could have also written as:
+Also note that the numbers are optional, so you could have also written the second line as:
 
 ```python
-age = 20
-name = 'Swaroop'
-
-print('{} was {} years old when he wrote this book'.format(name, age))
-print('Why is {} playing with that python?'.format(name))
+# We can also use format without numbers
+#    (age & name are included based on relative position) 
+print('Why is a {} year old {} playing with that python?'.format(age, name))
 ```
 
 which will give the same exact output as the previous program.
 
-We can also name the parameters:
+We can also name the parameters like:
 
 ```python
-age = 20
-name = 'Swaroop'
-
-print('{name} was {age} years old when he wrote this book'.format(name=name, age=age))
-print('Why is {name} playing with that python?'.format(name=name))
+print('Why is a {a} year old {n} playing with that python?'.format(n=name, a=age))
 ```
 
 which will give the same exact output as the previous program.
 
-Python 3.6 introduced a shorter way to do named parameters, called "f-strings":
+Python 3.6+ introduced a shorter way to do named parameters, called "f-strings" and this is now the preferred method:
 
 ```python
 age = 20
 name = 'Swaroop'
 
-print(f'{name} was {age} years old when he wrote this book')  # notice the 'f' before the string
-print(f'Why is {name} playing with that python?')  # notice the 'f' before the string
+print(f'{name} was {age} years old when he wrote this book')
+print(f'Why is a {age} year old {name} playing with that python?')
 ```
 
 which will give the same exact output as the previous program.
@@ -169,12 +163,14 @@ What Python does in the `format` method is that it substitutes each argument val
 
 ```python
 # decimal (.) precision of 3 for float '0.333'
-print('{0:.3f}'.format(1.0/3))
+# by dividing: 1.0/3 (the :.3f means 3 # after decimal point)
+print(f'{1.0/3:.3f}')
 # fill with underscores (_) with the text centered
 # (^) to 11 width '___hello___'
-print('{0:_^11}'.format('hello'))
-# keyword-based 'Swaroop wrote A Byte of Python'
-print('{name} wrote {book}'.format(name='Swaroop', book='A Byte of Python'))
+print(f'{"hello":_^11}') # note use of "" for internal quotes
+# or with variable and using *
+word = 'hello'
+print(f'{word:*^11}')
 ```
 
 Output:
@@ -182,7 +178,7 @@ Output:
 ```
 0.333
 ___hello___
-Swaroop wrote A Byte of Python
+***hello***
 ```
 
 Since we are discussing formatting, note that `print` always ends with an invisible "new line" character (`\n`) so that repeated calls to `print` will all print on a separate line each. To prevent this newline character from being printed, you can specify that it should `end` with a blank:
@@ -211,6 +207,25 @@ Output is:
 ```
 a b c
 ```
+
+Though if you truly just wanted to print 3 characters with spaces in-between (on the same line) you can also use the `sep` argument which will print each string or variable passed to print with whatever you used as a separator. It looks like:
+
+```python
+print('a', 'b', 'c', sep=' ', end=' ')
+print('------')
+print('a', 'b', 'c', sep=' ')
+print('------')
+```
+
+Output is:
+
+```
+a b c ------
+a b c
+------
+```
+
+By not setting end we get a newline after or we can set end to to an empty space (`''`) if we want it all on the same line.
 
 ### Escape Sequences
 
@@ -274,7 +289,7 @@ Remember, Python refers to anything used in a program as an _object_.  This is m
 
 > **Note for Object Oriented Programming users**:
 >
-> Python is strongly object-oriented in the sense that everything is an object including numbers, strings and functions.
+> Python is strongly object-oriented in the sense that everything is an object including numbers, strings and functions. This means that the function signature `my_func(int)` is the same as `my_func(str)` because both are effectively `my_func(Object)` so traditional method overloading doesn't work the same in Python.
 
 We will now see how to use variables along with literal constants. Save the following example and run the program.
 
@@ -285,13 +300,11 @@ Henceforth, the standard procedure to save and run a Python program is as follow
 ### For PyCharm
 
 1. Open [PyCharm](./first_steps.md#pycharm).
-2. Create new file with the filename mentioned.
-3. Type the program code given in the example.
-4. Right-click and run the current file.
+2. Create new file using the `create welcome script` option
+3. Delete sample code and start typing the program code given in the example.
+4. Click the Run option to build & run the current file.
 
-NOTE: Whenever you have to provide [command line arguments](./modules.md#modules), click on `Run` -> `Edit Configurations` and type the arguments in the `Script parameters:` section and click the `OK` button:
-
-![PyCharm command line arguments](./img/pycharm_command_line_arguments.png)
+To add command line arguments we have to add a configuration file (the default doesn't have it) so see [PyCharm Command Line](./first_steps.md#pycharm-command-line) once this is required.
 
 ### For other editors
 
