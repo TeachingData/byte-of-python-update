@@ -63,12 +63,13 @@ If you are interested in a detailed discussion on this topic, check out [Finding
   - You can continue with the "Community" verison (less features)
   - If Student/Educator: You can apply for the [JetBrains Education License](https://www.jetbrains.com/academy/student-pack/) (to apply you merely need to sign in once approved)
 
-When you open PyCharm, you'll see this, click on `Create New Project`:
+When you open PyCharm, you'll see this, click on `New Project`:
 
 ![When you open PyCharm](./img/pycharm_open.png)
 
-Select `New Project` at the top then `Pure Python`:
-Ensure you select `venv` and then either use the installed Python version version or select a different version to have PyCharm install it locally.
+Select `Pure Python` at the top:
+Ensure you select `venv` and then either use the installed Python version or select a different version to have PyCharm install it locally.
+
 Change location from the default to the location you want ending in `helloworld` and ensure you clicked you `create welcome script` option
 You should see details similar to this:
 
