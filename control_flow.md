@@ -106,7 +106,7 @@ Remember that the `for..in` loop works for any sequence. Here, we have a list of
 
 > **Note for C/C++/Java/C# Programmers**
 > 
-> The Python `for` loop is by default an enhanced or foreach loop over a traditional c-style for-loop. C++ & Java programmers will note that the same is similar to `for (int i : IntArray)` versions and especially `for (var i : IntArray)` of Java 11+ or `for (auto i : IntArray)` of Modern C++.
+> The Python `for` loop is by default an enhanced or foreach loop over a traditional c-style for-loop. C++ & Java programmers will note that the same is similar to `for (int i : IntArray)` versions and especially `for (var i : IntArray)` of Java 11+ or `for (const auto& i : IntArray)` of Modern C++ (11+).
 > 
 > So if you want the traditional `for (int i = 0; i < 5; i++)` c-style loop, then in Python you write just `for i in range(0,5)`.
 
