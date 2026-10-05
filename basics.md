@@ -287,7 +287,7 @@ Henceforth, the standard procedure to save and run a Python program is as follow
 1. Open [PyCharm](./first_steps.md#pycharm).
 2. Create new file with the filename mentioned.
 3. Type the program code given in the example.
-4. Right-click and run the current file.
+4. Click on "run" (the triangle) to build and run the current file.
 
 NOTE: Whenever you have to provide [command line arguments](./modules.md#modules), click on `Run` -> `Edit Configurations` and type the arguments in the `Script parameters:` section and click the `OK` button:
 
