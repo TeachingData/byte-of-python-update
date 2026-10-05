@@ -70,19 +70,6 @@ Besides the standard library, there are various other high-quality libraries whi
 
 Python is indeed an exciting and powerful language. It has the right combination of performance and features that make writing programs in Python both fun and easy.
 
-## Python 3 versus 2
-
-You can ignore this section if you're not interested in the difference between "Python version 2" and "Python version 3". But please do be aware of which version you are using. This book is written for Python version 3.
-
-Remember that once you have properly understood and learn to use one version, you can easily learn the differences and use the other one. The hard part is learning programming and understanding the basics of Python language itself. That is our goal in this book, and once you have achieved that goal, you can easily use Python 2 or Python 3 depending on your situation.
-
-For details on differences between Python 2 and Python 3, see:
-
-- [The future of Python 2](http://lwn.net/Articles/547191/)
-- [Porting Python 2 Code to Python 3](https://docs.python.org/3/howto/pyporting.html)
-- [Writing code that runs under both Python2 and 3](https://wiki.python.org/moin/PortingToPy3k/BilingualQuickRef)
-- [Supporting Python 3: An in-depth guide](http://python3porting.com)
-
 ## What Programmers Say
 
 You may find it interesting to read what great hackers like Eric S. Raymond (ESR) have to say about Python:
